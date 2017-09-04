@@ -1,0 +1,25 @@
+<div class="row">
+  <h3 class="text-center">Profile info</h3>
+</div>
+<div class="row">
+  <div class="col-md-3">
+    <div class="row">
+      <div class="col-md-offset-2 col-md-9">
+        <img src="../../PerumalsamyRavindran_Logo.jpg" class="profilePic" />
+      </div>
+    </div>
+    <ul class="list-group">
+      <li class="list-group-item listitemtag">
+        <a routerLink="summary" routerLinkActive="activelistitemtag">Summary </a>
+      </li>
+      <li class="list-group-item listitemtag">
+        <a routerLink="skills" routerLinkActive="activelistitemtag">skills </a></li>
+      <li class="list-group-item listitemtag">
+        <a routerLink="professional-experience" routerLinkActive="activelistitemtag">professional-experience </a>
+      </li>
+    </ul>
+  </div>
+  <div class="col-md-9">
+    <router-outlet></router-outlet>
+  </div>
+</div>
