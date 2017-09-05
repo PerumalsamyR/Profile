@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from '../app.service';
 
 @Component({
   selector: 'app-awards',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AwardsComponent implements OnInit {
 
-  constructor() { }
+  AppService: AppService;
+  constructor(appService: AppService) {
+    this.AppService = appService;
+  }
+
 
   ngOnInit() {
   }

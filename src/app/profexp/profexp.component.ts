@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from '../app.service';
 
 @Component({
   selector: 'app-profexp',
@@ -6,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profexp.component.css']
 })
 export class ProfexpComponent implements OnInit {
-
-  constructor() { }
+  AppService: AppService;
+  constructor(appService: AppService) {
+    this.AppService = appService;
+  }
 
   ngOnInit() {
   }

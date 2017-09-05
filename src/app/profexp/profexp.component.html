@@ -12,17 +12,11 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Cognizant Technology solutions</td>
-          <td>Senior Associate</td>
-          <td>10-Dec-2014</td>
-          <td>Till Now</td>
-        </tr>
-        <tr>
-          <td>Tata Consultancy Services</td>
-          <td>I.T Analyst</td>
-          <td>24-Mar-2010</td>
-          <td>08-Dec-2014</td>
+        <tr *ngFor="let org of AppService.profile.Organizations">
+          <td>{{org.Name}}</td>
+          <td>{{org.Designation}}</td>
+          <td>{{org.DOJ}}</td>
+          <td>{{org.DOL}}</td>
         </tr>
       </tbody>
     </table>

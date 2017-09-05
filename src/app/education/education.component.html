@@ -13,26 +13,12 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>B.E</td>
-        <td>E.C.E</td>
-        <td>Anna University, India</td>
-        <td>2009</td>
-        <td>71</td>
-      </tr>
-      <tr>
-        <td>Intermediate</td>
-        <td>M.P.C</td>
-        <td>State Board,TN,India</td>
-        <td>2005</td>
-        <td>89</td>
-      </tr>
-      <tr>
-        <td>SSLC</td>
-        <td></td>
-        <td>State Board,TN,India</td>
-        <td>2003</td>
-        <td>93</td>
+      <tr *ngFor="let edu of AppService.profile.Education">
+        <td>{{edu.Degree}}</td>
+        <td>{{edu.Disipline}}</td>
+        <td>{{edu.CollegeOrUniversity}}</td>
+        <td>{{edu.YearOfPassing}}</td>
+        <td>{{edu.Marks}}</td>
       </tr>
     </tbody>
   </table>

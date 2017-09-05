@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from '../app.service';
+import { IProfile } from '../interfaces/profile';
 
 @Component({
   selector: 'app-profile',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
+  profile: IProfile;
+  AppService: AppService;
+  constructor(appService: AppService) {
+    this.AppService = appService;
   }
-
+  ngOnInit() {
+    this.AppService.getProfileData();
+  }
 }
