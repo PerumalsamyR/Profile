@@ -4,6 +4,10 @@ import { ISummary } from './summary';
 import { IProject } from './project';
 import { ITechnicalKnowledge } from './technical-knowledge';
 
+import { IAward } from './award';
+import { ICertification } from './certification';
+import { IPersonaldetail } from './personaldetail';
+
 export interface IProfile {
   Desc?: string;
   EmailId?: string;
@@ -14,5 +18,7 @@ export interface IProfile {
   Organizations?: Array<IOrganization>;
   Summary?: Array<ISummary>;
   Projects?: Array<IProject>;
-  TechnicalKnowledge?: Array<ITechnicalKnowledge>;
+  Awards?: Array<IAward>;
+  Certifications?: Array<ICertification>;
+  PersonalDetails?: IPersonaldetail;
 }

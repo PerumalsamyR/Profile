@@ -1,12 +1,11 @@
 <div>
   <h3 class="text-center">Technical Skills</h3>
- <div *ngFor="let tech of AppService.profile.TechnicalKnowledge">
-   <span class="text-primary"> {{tech.Desc}} :</span>
-   <span *ngFor="let techknow of tech.Items;let last = last;" class="text-success">
-     {{techknow.Desc}}({{techknow.Rate}})<span *ngIf="!last">,</span>
-   </span>
-
-   <br/>
-   <div class="divider"></div>
- </div>
+  <div *ngFor="let tech of AppService.profile.TechnicalKnowledge">
+    <span class="text-primary"> {{tech.Desc}} :</span>
+    <span *ngFor="let techknow of tech.Items;let last = last;" class="text-success">
+     {{techknow.Desc}}<span *ngIf="!last">,</span>
+    </span>
+    <br/>
+    <div class="divider"></div>
+  </div>
 </div>

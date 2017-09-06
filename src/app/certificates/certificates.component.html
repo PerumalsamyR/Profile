@@ -1,3 +1,19 @@
-<p>
-  certificates works!
-</p>
+<div class="text-center">
+  <h3 class="text-center">Certifications</h3>
+<table class="table table-bordered table-hover mytable">
+  <thead>
+    <tr>
+      <td>Name</td>
+      <td>Vendor</td>
+      <td>CompletedOn</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cer of AppService.profile.Certifications">
+      <td>{{cer.Name}}</td>
+      <td>{{cer.Vendor}}</td>
+      <td>{{cer.CompletedOn}}</td>
+    </tr>
+  </tbody>
+</table>
+</div>

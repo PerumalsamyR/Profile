@@ -46,9 +46,11 @@
     </ul>
   </div>
   <div class="col-md-9">
-    <router-outlet *ngIf="AppService.profile"></router-outlet>
-    <div class="cssload-container" *ngIf="!AppService.profile">
-      <div class="cssload-loading"><i></i><i></i><i></i><i></i></div>
+    <div class="contentbox">
+      <router-outlet *ngIf="AppService.profile"></router-outlet>
+      <div class="cssload-container" *ngIf="!AppService.profile">
+        <div class="cssload-loading"><i></i><i></i><i></i><i></i></div>
+      </div>
     </div>
   </div>
 </div>

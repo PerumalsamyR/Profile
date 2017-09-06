@@ -1,3 +1,19 @@
-<p>
-  awards works!
-</p>
+<div class="text-center">
+  <h3 class="text-center">Awards</h3>
+<table class="table table-bordered table-hover mytable">
+  <thead>
+    <tr>
+      <td>Name</td>
+      <td>Organization</td>
+      <td>Received On</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cer of AppService.profile.Awards">
+      <td>{{cer.Name}}</td>
+      <td>{{cer.Organization}}</td>
+      <td>{{cer.ReceivedOn}}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
