@@ -1,3 +1,8 @@
-<p>
-  skills works!
-</p>
+<div>
+  <p *ngFor="let tech of AppService.profile.TechnicalKnowledge">
+    {{tech.Desc}}:
+    <span *ngFor="let techknow of tech.Items">
+      {{techknow.Desc}}({{techknow.Rate}}),
+    </span>
+  </p>
+</div>>

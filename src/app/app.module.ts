@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 
+import { environment } from '../environments/environment';
 import { AppService } from './app.service';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -37,10 +38,6 @@ const routes: Routes = [
   },
   { path: 'blog', component: BlogComponent }
 ];
-const firebaseConfig = {
-
-};
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,7 +56,7 @@ const firebaseConfig = {
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
-    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule
   ],
   providers: [AppService],
