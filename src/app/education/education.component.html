@@ -1,25 +1,23 @@
 <div class="text-center">
-  <div class="row text-center">
-    <h4> Educational Information</h4>
-  </div>
-  <table class="table table-bordered">
-    <thead>
-      <tr>
-        <td>Examination Passed</td>
-        <td>Discipiline</td>
-        <td>College/University</td>
-        <td>Year of Passing</td>
-        <td>% of Marks</td>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let edu of AppService.profile.Education">
-        <td>{{edu.Degree}}</td>
-        <td>{{edu.Disipline}}</td>
-        <td>{{edu.CollegeOrUniversity}}</td>
-        <td>{{edu.YearOfPassing}}</td>
-        <td>{{edu.Marks}}</td>
-      </tr>
-    </tbody>
-  </table>
+  <h3 class="text-center">Education</h3>
+<table class="table table-bordered table-hover mytable">
+  <thead>
+    <tr>
+      <td>Examination Passed</td>
+      <td>Discipiline</td>
+      <td>College/University</td>
+      <td>Year of Passing</td>
+      <td>% of Marks</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let edu of AppService.profile.Education">
+      <td>{{edu.Degree}}</td>
+      <td>{{edu.Disipline}}</td>
+      <td>{{edu.CollegeOrUniversity}}</td>
+      <td>{{edu.YearOfPassing}}</td>
+      <td>{{edu.Marks}}</td>
+    </tr>
+  </tbody>
+</table>
 </div>

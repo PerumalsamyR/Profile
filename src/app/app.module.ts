@@ -32,11 +32,15 @@ const routes: Routes = [
       { path: 'education', component: EducationComponent },
       { path: 'projects-worked', component: ProjworkedComponent },
       { path: 'awards-recognition', component: AwardsComponent },
-      { path: 'certification ', component: CertificatesComponent },
+      { path: 'certification', component: CertificatesComponent },
       { path: 'personalinfo', component: PersonalComponent }
     ]
   },
-  { path: 'blog', component: BlogComponent }
+  {
+    path: 'blog',
+    component: BlogComponent,
+    children: []
+  }
 ];
 @NgModule({
   declarations: [

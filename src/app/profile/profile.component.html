@@ -1,15 +1,15 @@
-<div class="row">
-  <div class="col-md-5 text-center">
+<div class="row" *ngIf="AppService.profile">
+  <div class="col-md-5">
     <h4>{{AppService.profile.Name}}' Profile</h4>
   </div>
   <div class="col-md-3">
     <p><i class="fa fa-envelope-square" aria-hidden="true"></i>{{AppService.profile.EmailId}}</p>
   </div>
   <div class="col-md-2">
-      <p><i class="fa fa-phone-square" aria-hidden="true"></i>{{AppService.profile.Mobile}}</p>
+    <p><i class="fa fa-phone-square" aria-hidden="true"></i>{{AppService.profile.Mobile}}</p>
   </div>
   <div class="col-md-2">
-      <p>Place: {{AppService.profile.Place}}</p>
+    <p>Place: {{AppService.profile.Place}}</p>
   </div>
 </div>
 <div class="row">
@@ -38,7 +38,7 @@
         <a routerLink="awards-recognition" routerLinkActive="activelistitemtag">Awards Recognition</a>
       </li>
       <li class="list-group-item listitemtag">
-        <a routerLink="certification" routerLinkActive="activelistitemtag">Certification </a>
+        <a routerLink="certification" routerLinkActive="activelistitemtag">Certification</a>
       </li>
       <li class="list-group-item listitemtag">
         <a routerLink="personalinfo" routerLinkActive="activelistitemtag">Personal Information</a>
@@ -46,6 +46,9 @@
     </ul>
   </div>
   <div class="col-md-9">
-    <router-outlet></router-outlet>
+    <router-outlet *ngIf="AppService.profile"></router-outlet>
+    <div class="cssload-container" *ngIf="!AppService.profile">
+      <div class="cssload-loading"><i></i><i></i><i></i><i></i></div>
+    </div>
   </div>
 </div>

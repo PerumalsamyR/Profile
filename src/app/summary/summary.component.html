@@ -1,5 +1,6 @@
-<div>
-  <p *ngFor="let summary of AppService.profile.Summary">
-    {{summary.Desc}}
+<div *ngIf="AppService.profile">
+  <h3 class="text-center">Summary</h3>
+  <p *ngFor="let summary of AppService.profile.Summary" class="text-primary">
+    <i class="fa fa-hand-o-right" aria-hidden="true"></i>  {{ summary.Desc}}
   </p>
 </div>

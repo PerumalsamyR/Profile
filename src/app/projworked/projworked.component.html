@@ -1,18 +1,30 @@
 <div>
+  <h3 class="text-center">Projects Worked</h3>
   <div *ngFor="let project of AppService.profile.Projects">
-    <p>Project: {{project.Name}} ({{project.WorkedDateRange}})</p>
-    <p>Position: {{project.Role}}</p>
-    <p>Cliend: {{project.Client}}</p>
-    <p>Description:</p>
-    <p>{{project.Description}}</p>
-    <p>Responsibilites:</p>
-    <p *ngFor="let res of project.Responsibilities">
-      {{res.Desc}}
+    <p class="project">{{project.Name}} <span class="projectworkedrange"> ({{project.WorkedDateRange}} </span>)</p>
+    <div class="row">
+      <div class="col-md-4">
+        <p class="projectrole text-left">Position: {{project.Role}}</p>
+      </div>
+      <div class="col-md-8">
+        <p class="projectrole text-right">Locations Worked: <span *ngFor="let loc of project.LocationsWorked;let last=last;">
+              {{loc.Desc}}<span *ngIf="!last">,</span>
+          </span>
+        </p>
+      </div>
+    </div>
+    <p class="projectclient">Client: {{project.Client}}</p>
+    <p class="projectdescheader">Description:</p>
+    <p class="projectdesc">{{project.Description}}</p>
+    <p class="projectresposibilityheader">Responsibilites:</p>
+    <p *ngFor="let res of project.Responsibilities" class="projectresposibility">
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i> {{res.Desc}}
     </p>
-    <p>Environment:</p>
-    <span *ngFor="let env of project.Environments">
-      {{env.Desc}},
-    </span>
+    <p class="projectenvironment">Environment:
+      <span *ngFor="let env of project.Environments;let last=last;">
+      {{env.Desc}}<span *ngIf="!last">,</span>
+      </span>
+    </p>
     <div class="divider"></div>
   </div>
 </div>
