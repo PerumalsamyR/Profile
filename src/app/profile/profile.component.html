@@ -1,5 +1,16 @@
 <div class="row">
-  <h3 class="text-center">Profile info</h3>
+  <div class="col-md-5 text-center">
+    <h4>{{AppService.profile.Name}}' Profile</h4>
+  </div>
+  <div class="col-md-3">
+    <p><i class="fa fa-envelope-square" aria-hidden="true"></i>{{AppService.profile.EmailId}}</p>
+  </div>
+  <div class="col-md-2">
+      <p><i class="fa fa-phone-square" aria-hidden="true"></i>{{AppService.profile.Mobile}}</p>
+  </div>
+  <div class="col-md-2">
+      <p>Place: {{AppService.profile.Place}}</p>
+  </div>
 </div>
 <div class="row">
   <div class="col-md-3">
