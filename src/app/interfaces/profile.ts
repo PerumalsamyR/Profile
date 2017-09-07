@@ -19,6 +19,7 @@ export interface IProfile {
   Summary?: Array<ISummary>;
   Projects?: Array<IProject>;
   Awards?: Array<IAward>;
+  TechnicalKnowledge?: ITechnicalKnowledge;
   Certifications?: Array<ICertification>;
   PersonalDetails?: IPersonaldetail;
 }
