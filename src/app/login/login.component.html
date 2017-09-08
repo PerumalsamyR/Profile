@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-md-offset-4 col-md-4">
+    <form>
+      <div class="row">
+        <div class="col-xs-12">
+          <app-pr-input type="string" placeholder="Email" [(Model)]="loginRequest.Email"></app-pr-input>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <app-pr-input type="password" placeholder="Password" [(Model)]="loginRequest.Email"></app-pr-input>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <button type="button" (click)="Login()">Login</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,11 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuth } from 'angularfire2/auth';
+
+import { CoreModule } from '../app/core/core.module';
+
 
 import { environment } from '../environments/environment';
 import { AppService } from './app.service';
+import { LoginService } from './login.service';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -18,6 +24,7 @@ import { ProjworkedComponent } from './projworked/projworked.component';
 import { AwardsComponent } from './awards/awards.component';
 import { PersonalComponent } from './personal/personal.component';
 import { CertificatesComponent } from './certificates/certificates.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'profile', pathMatch: 'full' },
@@ -40,6 +47,11 @@ const routes: Routes = [
     path: 'blog',
     component: BlogComponent,
     children: []
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
+    children: []
   }
 ];
 @NgModule({
@@ -55,15 +67,18 @@ const routes: Routes = [
     ProjworkedComponent,
     AwardsComponent,
     PersonalComponent,
-    CertificatesComponent
+    CertificatesComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    CoreModule,
+    FormsModule
   ],
-  providers: [AppService],
+  providers: [AppService, LoginService, AngularFireAuth],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
