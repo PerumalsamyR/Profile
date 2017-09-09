@@ -1,5 +1,5 @@
 <div>
   <md-form-field>
-    <input mdInput type={{type}} placeholder="{{placeholder}}" [(ngModel)]="Model">
+    <input mdInput type={{type}} placeholder="{{placeholder}}" [(ngModel)]="model" (ngModelChange)="onChange()">
   </md-form-field>
 </div>

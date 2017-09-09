@@ -16,7 +16,7 @@ export class LoginService {
       )
       .then(() => {
         localStorage.setItem('uid', this._angularFire.auth.currentUser.uid);
-        this._router.navigate(['/home']);
+        this._router.navigate(['/profile']);
       })
       .catch(error => {
         alert(error);

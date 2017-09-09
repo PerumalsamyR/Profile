@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { MdInput, MdFormField } from '@angular/material';
 
 @Component({
@@ -8,12 +8,17 @@ import { MdInput, MdFormField } from '@angular/material';
 })
 export class PrInputComponent implements OnInit {
 
-  @Input() Model: string | number;
+  @Input() model: string | number;
   @Input() placeholder: string;
   @Input() type: string;
+  @Output() modelChange = new EventEmitter<string | number>();
+
   constructor() { }
 
   ngOnInit() {
   }
-
+  onChange() {
+    this.modelChange.emit(this.model);
+    console.log(this.model);
+  }
 }
