@@ -1,5 +1,5 @@
 <div class="text-center">
-  <h3 class="text-center">Education</h3>
+  <h3 class="text-center text-primary">Education</h3>
 <table class="table table-bordered table-hover mytable">
   <thead>
     <tr>
@@ -12,11 +12,11 @@
   </thead>
   <tbody>
     <tr *ngFor="let edu of AppService.profile.Education">
-      <td>{{edu.Degree}}</td>
-      <td>{{edu.Disipline}}</td>
-      <td>{{edu.CollegeOrUniversity}}</td>
-      <td>{{edu.YearOfPassing}}</td>
-      <td>{{edu.Marks}}</td>
+      <td class="text-primary">{{edu.Degree}}</td>
+      <td class="text-primary">{{edu.Disipline}}</td>
+      <td class="text-primary">{{edu.CollegeOrUniversity}}</td>
+      <td class="text-primary">{{edu.YearOfPassing}}</td>
+      <td class="text-primary">{{edu.Marks}}</td>
     </tr>
   </tbody>
 </table>

@@ -1,5 +1,5 @@
 <div class="text-center">
-  <h3 class="text-center">Technical Skills</h3>
+  <h3 class="text-center text-primary">Technical Skills</h3>
   <table class="table table-bordered mytable">
     <thead>
       <tr>
@@ -11,10 +11,10 @@
     </thead>
     <tbody>
       <tr *ngFor="let org of AppService.profile.Organizations">
-        <td>{{org.Name}}</td>
-        <td>{{org.Designation}}</td>
-        <td>{{org.DOJ}}</td>
-        <td>{{org.DOL}}</td>
+        <td class="text-primary">{{org.Name}}</td>
+        <td class="text-primary">{{org.Designation}}</td>
+        <td class="text-primary">{{org.DOJ}}</td>
+        <td class="text-primary">{{org.DOL}}</td>
       </tr>
     </tbody>
   </table>

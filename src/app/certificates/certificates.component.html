@@ -1,5 +1,5 @@
 <div class="text-center">
-  <h3 class="text-center">Certifications</h3>
+  <h3 class="text-center text-primary">Certifications</h3>
 <table class="table table-bordered table-hover mytable">
   <thead>
     <tr>
@@ -10,9 +10,9 @@
   </thead>
   <tbody>
     <tr *ngFor="let cer of AppService.profile.Certifications">
-      <td>{{cer.Name}}</td>
-      <td>{{cer.Vendor}}</td>
-      <td>{{cer.CompletedOn}}</td>
+      <td class="text-primary">{{cer.Name}}</td>
+      <td class="text-primary">{{cer.Vendor}}</td>
+      <td class="text-primary">{{cer.CompletedOn}}</td>
     </tr>
   </tbody>
 </table>

@@ -1,27 +1,27 @@
 <div>
-  <h3 class="text-center">Projects Worked</h3>
+  <h3 class="text-center text-primary">Projects Worked</h3>
   <div *ngFor="let project of AppService.profile.Projects">
     <p class="project">{{project.Name}} <span class="projectworkedrange"> ({{project.WorkedDateRange}} </span>)</p>
     <div class="row">
       <div class="col-md-4">
-        <p class="projectrole text-left">Position: {{project.Role}}</p>
+        <p class="projectrole text-left  text-primary">Position: {{project.Role}}</p>
       </div>
       <div class="col-md-8">
-        <p class="projectrole text-right">Locations Worked: <span *ngFor="let loc of project.LocationsWorked;let last=last;">
+        <p class="projectrole text-right text-primary">Locations Worked: <span *ngFor="let loc of project.LocationsWorked;let last=last;">
               {{loc.Desc}}<span *ngIf="!last">,</span>
           </span>
         </p>
       </div>
     </div>
-    <p class="projectclient">Client: {{project.Client}}</p>
-    <p class="projectdescheader">Description:</p>
-    <p class="projectdesc">{{project.Description}}</p>
-    <p class="projectresposibilityheader">Responsibilites:</p>
-    <p *ngFor="let res of project.Responsibilities" class="projectresposibility">
+    <p class="projectclient text-primary">Client: {{project.Client}}</p>
+    <p class="projectdescheader text-primary">Description:</p>
+    <p class="projectdesc text-primary">{{project.Description}}</p>
+    <p class="projectresposibilityheader text-primary">Responsibilites:</p>
+    <p *ngFor="let res of project.Responsibilities" class="projectresposibility text-primary" [@flyinfromLeftAnimation]="'in'">
       <i class="fa fa-hand-o-right" aria-hidden="true"></i> {{res.Desc}}
     </p>
-    <p class="projectenvironment">Environment:
-      <span *ngFor="let env of project.Environments;let last=last;">
+    <p class="projectenvironment text-primary">Environment:
+      <span *ngFor="let env of project.Environments;let last=last;" class="text-primary">
       {{env.Desc}}<span *ngIf="!last">,</span>
       </span>
     </p>

@@ -1,20 +1,5 @@
 <div *ngIf="AppService.profile">
-  <div class="row">
-    <div class="col-xs-12 text-center">
-      <h3>Profile</h3>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-12 col-sm-6 col-md-4">
-      <p><i class="fa fa-envelope-square" aria-hidden="true"></i>{{AppService.profile.EmailId}}</p>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-4">
-      <p><i class="fa fa-phone-square" aria-hidden="true"></i>{{AppService.profile.Mobile}}</p>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-4">
-      <p>Place: {{AppService.profile.Place}}</p>
-    </div>
-  </div>
+
 </div>
 <div class="row">
   <div class="col-xs-12 col-sm-4 col-md-3">
@@ -23,34 +8,56 @@
         <img src="../../PerumalsamyRavindran_Logo.jpg" class="profilePic" />
       </div>
     </div>
-    <ul class="list-group">
-      <li class="list-group-item listitemtag">
-        <a routerLink="summary" routerLinkActive="activelistitemtag">Summary </a>
-      </li>
-      <li class="list-group-item listitemtag">
-        <a routerLink="skills" routerLinkActive="activelistitemtag">Skills </a></li>
-      <li class="list-group-item listitemtag">
-        <a routerLink="professional-experience" routerLinkActive="activelistitemtag">Professional Experience </a>
-      </li>
-      <li class="list-group-item listitemtag">
-        <a routerLink="education" routerLinkActive="activelistitemtag">Education </a>
-      </li>
-      <li class="list-group-item listitemtag">
-        <a routerLink="projects-worked" routerLinkActive="activelistitemtag">Projects Worked</a>
-      </li>
-      <li class="list-group-item listitemtag">
-        <a routerLink="awards-recognition" routerLinkActive="activelistitemtag">Awards Recognition</a>
-      </li>
-      <li class="list-group-item listitemtag">
-        <a routerLink="certification" routerLinkActive="activelistitemtag">Certification</a>
-      </li>
-      <li class="list-group-item listitemtag">
-        <a routerLink="personalinfo" routerLinkActive="activelistitemtag">Personal Information</a>
-      </li>
-    </ul>
+    <div class="row">
+    <div class="pr-tab-container">
+      <div class="pr-tab-menu">
+        <div class="list-group">
+          <a class="list-group-item" routerLink="summary" routerLinkActive="active">
+            <p><i class="fa fa-list-alt" aria-hidden="true"></i> Summary</p>
+          </a>
+          <a class="list-group-item" routerLink="skills" routerLinkActive="active">
+            <p><i class="fa fa-asterisk" aria-hidden="true"></i> Skills</p>
+          </a>
+          <a class="list-group-item" routerLink="professional-experience" routerLinkActive="active">
+            <p><i class="fa fa-tasks" aria-hidden="true"></i> Professional Experience</p>
+          </a>
+          <a class="list-group-item" routerLink="education" routerLinkActive="active">
+            <p><i class="fa fa-graduation-cap" aria-hidden="true"></i> Education</p>
+          </a>
+          <a class="list-group-item" routerLink="projects-worked" routerLinkActive="active">
+            <p><i class="fa fa-tasks" aria-hidden="true"></i> Projects worked</p>
+          </a>
+          <a class="list-group-item" routerLink="awards-recognition" routerLinkActive="active">
+            <p><i class="fa fa-trophy" aria-hidden="true"></i> Awards Recognition</p>
+          </a>
+          <a class="list-group-item" routerLink="certification" routerLinkActive="active">
+            <p><i class="fa fa-certificate" aria-hidden="true"></i> Certification</p>
+          </a>
+          <a class="list-group-item" routerLink="personalinfo" routerLinkActive="active">
+            <p><i class="fa fa-info" aria-hidden="true"></i> Personal Information</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
   </div>
   <div class="col-xs-12 col-sm-8 col-md-9">
     <div class="contentbox">
+      <div>
+          <div class="row">
+              <div class="col-xs-12 col-sm-6 col-md-8 text-left">
+                  <h3 class="text-primary">Profile</h3>
+                </div>
+              <div class="col-xs-12 col-sm-6 col-md-4 text-right" *ngIf="AppService.profile">
+                <div class="row">
+                    <p class="text-primary"><i class="fa fa-envelope-square" aria-hidden="true"></i>{{AppService.profile.EmailId}}</p>
+                </div>
+                <div class="row">
+                    <p class="text-primary"><i class="fa fa-phone-square" aria-hidden="true"></i>{{AppService.profile.Mobile}}</p>
+                </div>
+              </div>
+            </div>
+      </div>
       <router-outlet *ngIf="AppService.profile"></router-outlet>
       <div class="cssload-container" *ngIf="!AppService.profile">
         <div class="cssload-loading"><i></i><i></i><i></i><i></i></div>
