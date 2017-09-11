@@ -11,14 +11,16 @@ export class PrInputComponent implements OnInit {
   @Input() model: string | number;
   @Input() placeholder: string;
   @Input() type: string;
+  @Input() isRequired: Boolean;
   @Output() modelChange = new EventEmitter<string | number>();
+  id: string;
 
   constructor() { }
 
   ngOnInit() {
+    this.id = this.placeholder + Math.round(Math.random() * 100000).toString();
   }
   onChange() {
     this.modelChange.emit(this.model);
-    console.log(this.model);
   }
 }

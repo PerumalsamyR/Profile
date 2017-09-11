@@ -1,5 +1,4 @@
-<div>
-  <md-form-field>
-    <input mdInput type={{type}} placeholder="{{placeholder}}" [(ngModel)]="model" (ngModelChange)="onChange()">
-  </md-form-field>
+<div class="form-group">
+  <label for="{{id}}">{{placeholder}}</label>
+  <input type="{{type}}" class="form-control" id="{{id}}" [required]="isRequired" [(ngModel)]="model" (ngModelChange)="onChange()">
 </div>

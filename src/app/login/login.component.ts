@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PrInputComponent } from '../core/pr-input/pr-input.component';
+import { PrButtonComponent } from '../core/pr-button/pr-button.component';
 import { Form } from '@angular/forms';
 
 import { LoginService } from '../login.service';

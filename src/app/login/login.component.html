@@ -3,17 +3,24 @@
     <form>
       <div class="row">
         <div class="col-xs-12">
-          <app-pr-input type="string" placeholder="Email" [(model)]="loginRequest.Email"></app-pr-input>
+          <app-pr-input type="string" isRequired="true" placeholder="Email" [(model)]="loginRequest.Email"></app-pr-input>
         </div>
       </div>
       <div class="row">
         <div class="col-xs-12">
-          <app-pr-input type="password" placeholder="Password" [(model)]="loginRequest.Password"></app-pr-input>
+          <app-pr-input type="password" isRequired="true" placeholder="Password" [(model)]="loginRequest.Password"></app-pr-input>
         </div>
       </div>
       <div class="row">
-        <div class="col-xs-12">
-          <button type="button" (click)="Login()">Login</button>
+        <div class="col-xs-offset-4 col-xs-4">
+          <app-pr-button btnText="Login" type="primary" size="sm" (click)="Login()"></app-pr-button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6">
+          <a routerLink="/signup">SignUp</a>
+        </div>
+        <div class="col-xs-6">
         </div>
       </div>
     </form>

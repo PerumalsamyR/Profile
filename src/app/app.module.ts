@@ -25,6 +25,7 @@ import { AwardsComponent } from './awards/awards.component';
 import { PersonalComponent } from './personal/personal.component';
 import { CertificatesComponent } from './certificates/certificates.component';
 import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'profile', pathMatch: 'full' },
@@ -52,6 +53,11 @@ const routes: Routes = [
     path: 'login',
     component: LoginComponent,
     children: []
+  },
+  {
+    path: 'signup',
+    component: SignupComponent,
+    children: []
   }
 ];
 @NgModule({
@@ -68,7 +74,8 @@ const routes: Routes = [
     AwardsComponent,
     PersonalComponent,
     CertificatesComponent,
-    LoginComponent
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
