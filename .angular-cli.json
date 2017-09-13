@@ -10,7 +10,9 @@
       "assets": [
         "assets",
         "PerumalsamyRavindran_Logo.jpg",
-		"PerumalsamyRavindran_mini_Logo.jpg"
+        "PerumalsamyRavindran_mini_Logo.jpg",
+        "robots.txt",
+        "sitemap.xml"
       ],
       "index": "index.html",
       "main": "main.ts",
@@ -21,14 +23,14 @@
       "prefix": "app",
       "styles": [
         "styles.css",
-		"../node_modules/bootstrap/dist/css/bootstrap.min.css",
-    "../node_modules/font-awesome/css/font-awesome.min.css",
-    "../node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+        "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+        "../node_modules/font-awesome/css/font-awesome.min.css",
+        "../node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
       ],
       "scripts": [
-	  "../node_modules/jquery/dist/jquery.min.js",
-	  "../node_modules/bootstrap/dist/js/bootstrap.min.js"
-	  ],
+        "../node_modules/jquery/dist/jquery.min.js",
+        "../node_modules/bootstrap/dist/js/bootstrap.min.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

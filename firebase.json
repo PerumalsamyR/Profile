@@ -1,5 +1,35 @@
 {
   "hosting": {
+    "headers": [
+      {
+        "source": "**/*.@(txt| eot|otf|ttf|ttc|woff|font.css)",
+        "headers": [
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "*"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(jpg|jpeg|gif|png)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=7200"
+          }
+        ]
+      },
+      {
+        // Sets the cache header for 404 pages to cache for 5 minutes
+        "source": "404.html",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=300"
+          }
+        ]
+      }
+    ],
     "public": "dist",
     "ignore": [
       "firebase.json",
@@ -7,6 +37,14 @@
       "**/node_modules/**"
     ],
     "rewrites": [
+      {
+        "source": "robots.txt",
+        "destination": "/robots.txt"
+      },
+      {
+        "source": "sitemap.xml",
+        "destination": "/sitemap.xml"
+      },
       {
         "source": "**",
         "destination": "/index.html"
