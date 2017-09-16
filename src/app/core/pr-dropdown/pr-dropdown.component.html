@@ -1,0 +1,9 @@
+<div class="form-group">
+  <label for="{{id}}">{{placeholder}}</label>
+  <select class="form-control" id="{{id}}" [(ngModel)]="model" (ngModelChange)="onChange()" [required]="isRequired" #select="ngModel">
+    <option [value]="option.key" *ngFor="let option of options">{{option.value}}</option>
+  </select>
+  <div [hidden]="!isRequired || select.valid || select.pristine" class="alert alert-danger">
+    {{placeholder}} is required
+  </div>
+</div>

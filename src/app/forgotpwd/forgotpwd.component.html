@@ -1,0 +1,33 @@
+<div class="contentbox">
+  <div class="row">
+    <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
+      <div class="row">
+        <div class="col-xs-12 text-center">
+          <h3>Forgot Password</h3>
+          <br/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <app-pr-input id="emailId" placeholder="Email" [(model)]="emailId" isRequired="true"></app-pr-input>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 text-center">
+          <app-pr-button btnText="Reset Password" type="primary" (click)="onReset()">
+          </app-pr-button>
+        </div>
+      </div>
+      <div class="row" *ngIf="isSuccess">
+        <div class="col-xs-12">
+          <p class="alert alert-success">Password has been sent successfully. Please check your Mail.</p>
+        </div>
+      </div>
+      <div class="row" *ngIf="isFailure">
+        <div class="col-xs-12">
+          <p class="alert alert-danger">Invalid Mail Or Error In Processing</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

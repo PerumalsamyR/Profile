@@ -11,6 +11,7 @@ export class PrButtonComponent implements OnInit {
   @Input() size: string;
   @Input() type: string;
   @Input() click: Function;
+  @Input() disabled: boolean;
   @Output() ngClick = new EventEmitter();
 
   btnClass: String;

@@ -26,6 +26,8 @@ import { PersonalComponent } from './personal/personal.component';
 import { CertificatesComponent } from './certificates/certificates.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { ForgotpwdComponent } from './forgotpwd/forgotpwd.component';
+import { FooterbarComponent } from './footerbar/footerbar.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'profile', pathMatch: 'full' },
@@ -58,6 +60,11 @@ const routes: Routes = [
     path: 'signup',
     component: SignupComponent,
     children: []
+  },
+  {
+    path: 'forgotpwd',
+    component: ForgotpwdComponent,
+    children: []
   }
 ];
 @NgModule({
@@ -75,7 +82,9 @@ const routes: Routes = [
     PersonalComponent,
     CertificatesComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    ForgotpwdComponent,
+    FooterbarComponent
   ],
   imports: [
     BrowserModule,

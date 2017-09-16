@@ -1,0 +1,9 @@
+<div class="form-group">
+  <label for="{{id}}">{{placeholder}}</label>
+  <textarea class="form-control" id="{{id}}" [required]="isRequired" [(ngModel)]="model" (ngModelChange)="onChange()" (blur)="onBlur()"
+    [required]="isRequired" #textarea="ngModel">
+    <div [hidden]="!isRequired || textarea.valid || textarea.pristine" class="alert alert-danger">
+      {{placeholder}} is required
+    </div>
+  </textarea>
+</div>

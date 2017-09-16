@@ -1,7 +1,7 @@
-<div>
+<div class="contentbox">
   <div class="row">
     <div class="col-md-offset-4 col-md-4">
-      <app-pr-input type="string" isRequired="true" placeholder="User Name" [(model)]="signUpRequest.UserName"></app-pr-input>
+      <app-pr-input type="string" isRequired="true" placeholder="Name" [(model)]="signUpRequest.UserName"></app-pr-input>
     </div>
   </div>
   <div class="row">
@@ -15,13 +15,13 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-xs-offset-4 col-xs-4">
+    <div class="col-xs-offset-4 col-xs-4 text-center">
       <app-pr-button btnText="SignUp" type="primary" size="sm" (click)="SignUp()"></app-pr-button>
     </div>
   </div>
   <div class="row">
     <div class="col-xs-6">
-        <app-pr-button btnText="SignUp Using Google" type="primary" size="sm" (click)="GoogleSignUp()"></app-pr-button>
+      <app-pr-button btnText="SignUp Using Google" type="primary" size="sm" (click)="GoogleSignUp()"></app-pr-button>
     </div>
     <div class="col-xs-6">
     </div>

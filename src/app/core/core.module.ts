@@ -6,6 +6,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { PrInputComponent } from './pr-input/pr-input.component';
 import { PrButtonComponent } from './pr-button/pr-button.component';
+import { PrDropdownComponent } from './pr-dropdown/pr-dropdown.component';
+import { PrTextareaComponent } from './pr-textarea/pr-textarea.component';
 
 @NgModule({
   imports: [
@@ -18,10 +20,14 @@ import { PrButtonComponent } from './pr-button/pr-button.component';
   declarations: [
     PrInputComponent,
     PrButtonComponent,
+    PrDropdownComponent,
+    PrTextareaComponent,
   ],
   exports: [
     PrInputComponent,
-    PrButtonComponent
+    PrButtonComponent,
+    PrTextareaComponent,
+    PrDropdownComponent
   ],
 })
 export class CoreModule { }

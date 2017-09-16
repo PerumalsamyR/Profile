@@ -1,23 +1,20 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { MdInput, MdFormField } from '@angular/material';
 
 @Component({
-  selector: 'app-pr-input',
-  templateUrl: './pr-input.component.html',
-  styleUrls: ['./pr-input.component.css']
+  selector: 'app-pr-textarea',
+  templateUrl: './pr-textarea.component.html',
+  styleUrls: ['./pr-textarea.component.css']
 })
-export class PrInputComponent implements OnInit {
+export class PrTextareaComponent implements OnInit {
 
   @Input() model: string | number;
   @Input() placeholder: string;
-  @Input() type: string;
   @Input() isRequired: Boolean;
   @Output() modelChange = new EventEmitter<string | number>();
   @Output() change = new EventEmitter<string | number>();
   @Output() blur = new EventEmitter<string | number>();
 
   id: string;
-
   constructor() { }
 
   ngOnInit() {
@@ -30,4 +27,5 @@ export class PrInputComponent implements OnInit {
   onBlur() {
     this.blur.emit();
   }
+
 }

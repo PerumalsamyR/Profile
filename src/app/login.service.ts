@@ -35,6 +35,13 @@ export class LoginService {
       function (error) {
       });
   }
+  passwordReset(emailId: string) {
+    this._angularFire.auth.sendPasswordResetEmail(emailId).then((data) => {
+
+    }).catch((error) => {
+
+    });
+  }
   googleAuth() {
     let provider = new firebase.auth.GoogleAuthProvider();
     provider.addScope('https://www.googleapis.com/auth/contacts.readonly');

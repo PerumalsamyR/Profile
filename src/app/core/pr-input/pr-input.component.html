@@ -1,4 +1,8 @@
 <div class="form-group">
   <label for="{{id}}">{{placeholder}}</label>
-  <input type="{{type}}" class="form-control" id="{{id}}" [required]="isRequired" [(ngModel)]="model" (ngModelChange)="onChange()">
+  <input type="{{type}}" class="form-control" id="{{id}}" [required]="isRequired" [(ngModel)]="model" (ngModelChange)="onChange()"
+    (blur)="onBlur()" #input="ngModel">
+  <div [hidden]="!isRequired || input.valid || input.pristine" class="alert alert-danger">
+    {{placeholder}} is required
+  </div>
 </div>
